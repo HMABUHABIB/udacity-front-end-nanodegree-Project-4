@@ -6,7 +6,7 @@ function handleSubmit(event) {
     //console.log(zip)
     //Client.checkForName(zip)
     //console.log("::: Form openweathermap :::")
-    fetch('http://localhost:8081/openweathermap?zip=' + zip + '')
+    fetch('https://news-article-with-natural-lang.glitch.me/openweathermap?zip=' + zip + '')
         .then(res => res.json())
         .then(function (res) {
             console.log(res)
