@@ -1,5 +1,6 @@
-import { checkForName } from './js/nameChecker'
+import { generateTable } from './js/generateTable'
 import { handleSubmit } from './js/formHandler'
+import { testLink } from './js/testLink'
 
 
 import './styles/resets.scss'
@@ -8,10 +9,11 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-//console.log(checkForName);
-//console.log("CHANGE!!");
+
 export {
- checkForName,
+ testLink,
  handleSubmit,
+
+ generateTable
 
 }

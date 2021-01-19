@@ -1,14 +1,50 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 200px 1fr 100px;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  background: rgb(136, 203, 171);
+  background: linear-gradient(
+    0deg,
+    rgba(136, 203, 171, 1) 0%,
+    rgba(0, 13, 60, 1) 100%
+  );
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
 }
 
 main {
-    flex: 2;
+  grid-area: main;
 }
 
 section {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #706d6d;
+  padding: 25px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3em;
+  margin: 2em 1rem;
+  text-align: center;
+  text-shadow: 2px 2px 10px #2a77aa;
+  animation: mymove 5s infinite;
 }

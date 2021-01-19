@@ -1,6 +1,7 @@
 var path = require('path')
 const mockAPIResponse = require('./mockAPI.js')
 const axios = require('axios')
+const fetch = require("node-fetch");
 
 /* Express */
 const express = require('express')
@@ -49,4 +50,26 @@ app.get('/openweathermap', async (req, res) => {
         res.send(error)
     }
 
+})
+
+
+app.get('/meaningCloud', async (req, res) => {
+
+
+    try {
+        const response = await fetch('https://api.meaningcloud.com/sentiment-2.1?key=51a942c0120ca46a625e964a69d45333&url=' + req.query.url + '&lang=en', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        const newData = await response.json();
+
+        console.log(req.query.url);
+        res.send(newData)
+    } catch (error) {
+        console.log("error", error);
+    }
 })
