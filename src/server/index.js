@@ -28,10 +28,11 @@ app.use(cors());
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
+var PORT = process.env.POR || 8081
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+app.listen(PORT, function () {
+    console.log('Example app listening on port ' + PORT + '!')
 })
 
 app.get('/test', function (req, res) {
