@@ -108,10 +108,10 @@ define("./service-worker.js",['./workbox-3b8b670f'], function (workbox) { 'use s
 
   workbox.precacheAndRoute([{
     "url": "./index.html",
-    "revision": "db184276c10edbb66325112f668d026f"
+    "revision": "d0c64fcd60e1a9879f79d1fe13373821"
   }, {
     "url": "main.js",
-    "revision": "fde11be6eaa20c095d814a17d1ffa273"
+    "revision": "02a4a72bbfd99c755023db3aa2a985b5"
   }], {});
 
 });

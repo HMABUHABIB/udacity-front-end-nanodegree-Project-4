@@ -12,8 +12,8 @@ function testLink(linkValue) {
 
 function handleSubmit(event) {
     event.preventDefault()
-    console.log('samer')
-    //console.log(linkValue);
+
+    console.log('samer');
     document.getElementById('results').innerHTML = 'loading ...'
     let linkValue = document.getElementById('link').value
     if (testLink(linkValue)) {
