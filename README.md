@@ -124,7 +124,7 @@ A great step to take with your finished project would be to deploy it! Unfortuna
 
 ## Live demo
 
-[glitch](https://hmabuhabib.github.io/udacity-front-end-nanodegree-Project-4/dist/)
+[News Article With Natural Lang website](https://hmabuhabib.github.io/udacity-front-end-nanodegree-Project-4/dist/)
 
 ## App demo photo
 
