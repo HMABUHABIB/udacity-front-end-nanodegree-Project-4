@@ -1,6 +1,6 @@
 import { generateTable } from './js/generateTable'
 import { handleSubmit } from './js/formHandler'
-import { testLink } from './js/testLink'
+
 
 
 import './styles/resets.scss'
@@ -11,7 +11,7 @@ import './styles/header.scss'
 
 
 export {
- testLink,
+
  handleSubmit,
 
  generateTable

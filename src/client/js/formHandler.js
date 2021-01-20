@@ -13,11 +13,11 @@ function testLink(linkValue) {
 function handleSubmit(event) {
     event.preventDefault()
 
-    //console.log(linkValue);
+    console.log('samer');
     document.getElementById('results').innerHTML = 'loading ...'
     let linkValue = document.getElementById('link').value
     if (testLink(linkValue)) {
-        fetch('http://localhost:8081/meaningCloud?url=' + linkValue + '')
+        fetch('https://evaluate-a-news-article-with-natural-language-proc.glitch.me/meaningCloud?url=' + linkValue + '')
             .then(res => res.json())
             .then(function (res) {
                 if (res.status.code == 0) {
