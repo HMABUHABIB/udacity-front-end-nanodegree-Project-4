@@ -28,7 +28,7 @@ app.use(cors());
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
-var PORT = process.env.POR || 8081
+var PORT = process.env.PORT || 8081
 
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, function () {
@@ -58,7 +58,7 @@ app.get('/meaningCloud', async (req, res) => {
 
 
     try {
-        const response = await fetch('https://api.meaningcloud.com/sentiment-2.1?key=51a942c0120ca46a625e964a69d45333&url=' + req.query.url + '&lang=en', {
+        const response = await fetch('https://api.meaningcloud.com/sentiment-2.1?key=' + process.env.API_KEY_NLP + '&url=' + req.query.url + '&lang=en', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
